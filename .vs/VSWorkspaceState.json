@@ -2,9 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Controllers",
+    "\\Procedures",
     "\\Views",
+    "\\Views\\Account",
     "\\Views\\Shared"
   ],
-  "SelectedNode": "\\Views\\Shared\\_Layout.cshtml",
+  "SelectedNode": "\\Views\\Account\\Register.cshtml",
   "PreviewInSolutionExplorer": false
 }

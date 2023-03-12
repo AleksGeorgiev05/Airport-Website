@@ -28,6 +28,10 @@
                         <li>@Html.ActionLink("Users", "Users", "Admin", null, new { @class = "navbar-link" })</li>
                         <li>@Html.ActionLink("Reservations", "Reservations", "Admin", null, new { @class = "navbar-link" })</li>
                     }
+                    else if (User.IsInRole("Employee"))
+                    {
+                        <li>@Html.ActionLink("Reservations", "Reservations", "Admin", null, new { @class = "navbar-link" })</li>
+                    }
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
