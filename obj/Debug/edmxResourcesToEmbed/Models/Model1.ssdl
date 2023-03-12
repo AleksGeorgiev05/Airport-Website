@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AirportDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'AirportDatabase.dbo.Flights' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Flights">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LocationFrom" Type="nvarchar" MaxLength="50" />
+    <Property Name="LocationTo" Type="nvarchar" MaxLength="50" />
+    <Property Name="TimeOfFlight" Type="smalldatetime" />
+    <Property Name="TimeOfArrival" Type="smalldatetime" />
+    <Property Name="TypeOfPlane" Type="nvarchar" MaxLength="50" />
+    <Property Name="UniqueNumberOfPlane" Type="nvarchar" MaxLength="50" />
+    <Property Name="NamePilot" Type="nvarchar" MaxLength="50" />
+    <Property Name="CapacityOfPassengers" Type="int" />
+    <Property Name="CapacityBusinessClass" Type="int" />
+    <Property Name="Duration" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'AirportDatabase.dbo.Reservations' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Reservations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameOfFlight" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SecondName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EGN" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nationality" Type="nvarchar" MaxLength="50" />
+    <Property Name="TypeOfTicket" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'AirportDatabase.dbo.UserTable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="UserTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="120" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="EGN" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phonenumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Role" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="AirportDatabaseModelStoreContainer">
+    <EntitySet Name="Flights" EntityType="Self.Flights" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Flights].[Id] AS [Id], 
+[Flights].[LocationFrom] AS [LocationFrom], 
+[Flights].[LocationTo] AS [LocationTo], 
+[Flights].[TimeOfFlight] AS [TimeOfFlight], 
+[Flights].[TimeOfArrival] AS [TimeOfArrival], 
+[Flights].[TypeOfPlane] AS [TypeOfPlane], 
+[Flights].[UniqueNumberOfPlane] AS [UniqueNumberOfPlane], 
+[Flights].[NamePilot] AS [NamePilot], 
+[Flights].[CapacityOfPassengers] AS [CapacityOfPassengers], 
+[Flights].[CapacityBusinessClass] AS [CapacityBusinessClass], 
+[Flights].[Duration] AS [Duration]
+FROM [dbo].[Flights] AS [Flights]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Reservations" EntityType="Self.Reservations" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[Reservations].[Id] AS [Id], 
+[Reservations].[NameOfFlight] AS [NameOfFlight], 
+[Reservations].[FirstName] AS [FirstName], 
+[Reservations].[SecondName] AS [SecondName], 
+[Reservations].[LastName] AS [LastName], 
+[Reservations].[EGN] AS [EGN], 
+[Reservations].[PhoneNumber] AS [PhoneNumber], 
+[Reservations].[Nationality] AS [Nationality], 
+[Reservations].[TypeOfTicket] AS [TypeOfTicket], 
+[Reservations].[Email] AS [Email]
+FROM [dbo].[Reservations] AS [Reservations]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="UserTable" EntityType="Self.UserTable" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[UserTable].[Id] AS [Id], 
+[UserTable].[Username] AS [Username], 
+[UserTable].[Password] AS [Password], 
+[UserTable].[Email] AS [Email], 
+[UserTable].[FirstName] AS [FirstName], 
+[UserTable].[LastName] AS [LastName], 
+[UserTable].[EGN] AS [EGN], 
+[UserTable].[Address] AS [Address], 
+[UserTable].[Phonenumber] AS [Phonenumber], 
+[UserTable].[Role] AS [Role]
+FROM [dbo].[UserTable] AS [UserTable]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
