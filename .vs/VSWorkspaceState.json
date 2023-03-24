@@ -2,11 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Controllers",
-    "\\Procedures",
     "\\Views",
     "\\Views\\Account",
+    "\\Views\\Admin",
     "\\Views\\Shared"
   ],
-  "SelectedNode": "\\Views\\Account\\Register.cshtml",
+  "SelectedNode": "\\Views\\Admin\\CreateFlight.cshtml",
   "PreviewInSolutionExplorer": false
 }

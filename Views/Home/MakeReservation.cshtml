@@ -68,7 +68,7 @@
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     <div class="form-group">
         <div class="col-md-10">
-            @Html.TextBoxFor(model => model.FirstName, new { placeholder = "First Name", @class = "form-control" })
+            @Html.TextBoxFor(model => model.FirstName, new { placeholder = "First Name", @class = "form-control", data_val = "true", data_val_required = "The First Name is required." })
             @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
             @Html.HiddenFor(model => model.Id)
         </div>
@@ -76,42 +76,42 @@
 
     <div class="form-group">
         <div class="col-md-10">
-            @Html.TextBoxFor(model => model.SecondName, new { placeholder = "Second Name", @class = "form-control" })
+            @Html.TextBoxFor(model => model.SecondName, new { placeholder = "Second Name", @class = "form-control", data_val = "true", data_val_required = "The Second Name is required." })
             @Html.ValidationMessageFor(model => model.SecondName, "", new { @class = "text-danger" })
         </div>
     </div>
 
     <div class="form-group">
         <div class="col-md-10">
-            @Html.TextBoxFor(model => model.LastName, new { placeholder = "Last Name", @class = "form-control" })
+            @Html.TextBoxFor(model => model.LastName, new { placeholder = "Last Name", @class = "form-control", data_val = "true", data_val_required = "The Last Name is required." })
             @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
         </div>
     </div>
 
     <div class="form-group">
         <div class="col-md-10">
-            @Html.TextBoxFor(model => model.EGN, new { placeholder = "EGN", @class = "form-control" })
+            @Html.TextBoxFor(model => model.EGN, new { placeholder = "EGN", @class = "form-control", data_val = "true", data_val_required = "The EGN is required." })
             @Html.ValidationMessageFor(model => model.EGN, "", new { @class = "text-danger" })
         </div>
     </div>
 
     <div class="form-group">
         <div class="col-md-10">
-            @Html.TextBoxFor(model => model.PhoneNumber, new { placeholder = "Phone", @class = "form-control" })
+            @Html.TextBoxFor(model => model.PhoneNumber, new { placeholder = "Phone Number", @class = "form-control", data_val = "true", data_val_required = "The Phone Number is required." })
             @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
         </div>
     </div>
 
     <div class="form-group">
         <div class="col-md-10">
-            @Html.TextBoxFor(model => model.Nationality, new { placeholder = "Nationality", @class = "form-control" })
+            @Html.TextBoxFor(model => model.Nationality, new { placeholder = "Nationality", @class = "form-control", data_val = "true", data_val_required = "The Nationality is required." })
             @Html.ValidationMessageFor(model => model.Nationality, "", new { @class = "text-danger" })
         </div>
     </div>
 
     <div class="form-group">
         <div class="col-md-10">
-            <select class="form-control" id="TypeOfTicket" name="TypeOfTicket">
+            <select class="form-control" id="TypeOfTicket" name="TypeOfTicket" required>
                 <option>First class</option>
                 <option>Second class</option>
             </select>
@@ -119,7 +119,7 @@
     </div>
     <div class="form-group">
         <div class="col-md-10">
-            @Html.TextBoxFor(model => model.Email, new { placeholder = "Email", @class = "form-control" })
+            @Html.TextBoxFor(model => model.Email, new { placeholder = "Email", @class = "form-control", data_val = "true", data_val_required = "The Email is required." })
             @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
         </div>
     </div>

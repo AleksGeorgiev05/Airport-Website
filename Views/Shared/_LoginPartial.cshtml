@@ -2,7 +2,7 @@
 <ul class="navbar-nav navbar-right" style="margin-top: 15px;list-style-type: none">
     @if (User.Identity.IsAuthenticated)
     {
-        <li><div style="margin-right: 10px;color: white;font-style: oblique">Welcome <b> @User.Identity.Name</b></div></li>
+        <li><div style="margin-right: 10px;color: white;font-style: oblique">Welcome <b>@User.Identity.Name</b></div></li>
     }
     @if (!User.IsInRole("Admin") && !User.IsInRole("Employee") && !User.IsInRole("User"))
     {
