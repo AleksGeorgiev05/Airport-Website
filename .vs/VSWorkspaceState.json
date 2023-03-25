@@ -7,6 +7,6 @@
     "\\Views\\Admin",
     "\\Views\\Shared"
   ],
-  "SelectedNode": "\\Views\\Admin\\CreateFlight.cshtml",
+  "SelectedNode": "\\Views\\Shared\\_LoginPartial.cshtml",
   "PreviewInSolutionExplorer": false
 }
