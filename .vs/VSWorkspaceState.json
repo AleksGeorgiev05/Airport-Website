@@ -5,8 +5,9 @@
     "\\Views",
     "\\Views\\Account",
     "\\Views\\Admin",
+    "\\Views\\Home",
     "\\Views\\Shared"
   ],
-  "SelectedNode": "\\Views\\Shared\\_LoginPartial.cshtml",
+  "SelectedNode": "\\Views\\Home\\Contact.cshtml",
   "PreviewInSolutionExplorer": false
 }
